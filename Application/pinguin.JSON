@@ -1,0 +1,14 @@
+{
+    "s99@umbc.edu": {
+        "token": "f0dd14687e053954a34fe6ea07c8557131a4be34497966e9f69b8ed77523d039",
+        "token_secret": "e48af7118f717a5b04735583cc7ab1c7"
+    },
+    "pinguindevelopment447@gmail.com": {
+        "token": "046ee6c6354eb267adb8bb38bd7d89a28c4ba11b309ffe5d0d1ce629e2f754e7",
+        "token_secret": "394288fa5b866f28d011183c23a9071c"
+    },
+    "pinguindevsam@gmail.com": {
+        "token": "45c413a8f05dc6e2e848b4d0436e4cd8dd24457c21738f5c880de3e0b0dcdeec",
+        "token_secret": "888b886175840e17247bcc4abc9a188d"
+    }
+}
