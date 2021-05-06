@@ -95,7 +95,7 @@ class Pinguin(QMainWindow):
 		self.main_window.ui.google_client = GoogleClient(self.auth)
 
 		print("heresdasd")
-		self.main_window.ui.widgets_refresh()
+		#self.main_window.ui.widgets_refresh()
 		self.main_window.ui.widgets_timer.start(30000)
 		self.main_window.show()
 

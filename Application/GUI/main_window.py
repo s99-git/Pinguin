@@ -624,13 +624,16 @@ class Main_Window(Ui_main_window):
     # time format not included in the message
     # formatting between messages not included
     def populate_forum_view(self):
-        self.forum_view.clear()
-        print("populating_forum_view")
-        messages = self.db.retrieve_all_posts()
-        for message in messages:
-            user = self.db.user_lookup(message['author'])['user_name']
-            self.forum_view.addItem(ForumListItem(message['_id'], user, message['message'], "Null"))
-            #self.forum_view.(user + ":  " + message['message']+"\n")
+
+        if self.current_group != None:
+            self.forum_view.clear()
+            print("populating_forum_view")
+            messages = self.db.retrieve_all_posts()
+            for message in messages:
+                user = self.db.user_lookup(message['author'])['user_name']
+                self.forum_view.addItem(ForumListItem(message['_id'], user, message['message'], "Null"))
+                #self.forum_view.(user + ":  " + message['message']+"\n")
+
 
 ########################################################################################################################
 #                                               Calendar Tab                                                           #
