@@ -210,6 +210,8 @@ class Main_Window(Ui_main_window):
         print("populated forum_tree")
         self.populate_groups_tree(self.docs_tree, self.docs_model, self.docs_node)
         print("populated docs_tree")
+        self.populate_forum_view()
+        print("populating forums")
         self.get_group_documents()
         print("get_group_docs")
         self.set_trello_tree()
@@ -235,7 +237,7 @@ class Main_Window(Ui_main_window):
         self.user.currentGroup = ObjectId(group_id)
         self.current_group_name = self.db.group_lookup(self.user.currentGroup)['group_name']
         self.current_calendar_id = self.db.group_lookup(self.user.currentGroup)['calendar_id']
-        self.get_months_events()
+        #self.get_months_events()
 
     def logout(self):
         sys.exit(0)
@@ -644,7 +646,7 @@ class Main_Window(Ui_main_window):
         event_day = event_date.day()
         time_zone = pytz.timezone('America/New_York')
         start_time = datetime.datetime(event_year,event_month,event_day,0,0,0,0)
-        end_time = datetime.datetime(event_year, event_month, event_day+1, 0, 0, 0, 0)
+        end_time = datetime.datetime(event_year, event_month, event_day, 23, 59, 0, 0)
         time_zone.localize(start_time)
         time_zone.localize(end_time)
         event_name = self.event_name_edit.text()
